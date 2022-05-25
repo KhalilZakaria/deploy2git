@@ -5,6 +5,7 @@ echo "Choose whatever action number you want:
 2) Move modifications to a another branch
 3) Delete branch locally and remotely
 4) Update commit without changing the message
+
 5) Quit
 ===>"
 read option
@@ -24,7 +25,9 @@ fi
 
 # OPTION 2 
 if [ "$option" == "2" ]; then
+
 	echo 'Enter a name for the newer branch:'
+
 	read branch
 	git stash
 	git checkout -b   $branch
@@ -38,6 +41,7 @@ if [ "$option" == "3" ]; then
 	git branch -D $branch
 	git push -d origin $branch
 fi
+
 
 # OPTION 4
 if [ "$option" == "4" ]; then 	
